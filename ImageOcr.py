@@ -26,7 +26,7 @@ for img in imgs:
     pageNumber = pageNumber + 1
     ocrText = pytesseract.image_to_string(img)
     print('----------')
-    print('Page Number being crawled is :' + pageNumber)
+    print('Page Number being crawled is :' + str(pageNumber))
     p = P(text=ocrText, stylename=withbreak)
     textdoc.text.addElement(p)
     # Alternative text saving, every page is saved to a different .txt file
